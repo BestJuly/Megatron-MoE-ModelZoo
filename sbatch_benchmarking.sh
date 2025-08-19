@@ -131,6 +131,9 @@ mkdir -p ${SLURM_LOGS} || {
 # Generate timestamp for job name
 TIMESTAMP=$(date +'%y%m%d_%H%M%S')
 
+echo "TRAINING_CMD: ${TRAINING_CMD}"
+exit 0
+
 # Submit SLURM job
 set +e
 sbatch <<EOF
